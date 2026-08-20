@@ -1,0 +1,11 @@
+{
+    "name": "pre-development/src",
+    "description": "PHP application source",
+    "type": "project",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": ""
+        }
+    }
+}

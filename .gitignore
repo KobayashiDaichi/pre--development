@@ -1,0 +1,5 @@
+node_modules/
+vendor/
+src/assets/scripts/
+src/assets/styles/
+.env

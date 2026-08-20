@@ -1,0 +1,409 @@
+$color-primary: #2563eb;
+$color-primary-light: #eff6ff;
+$color-text: #1f2937;
+$color-muted: #6b7280;
+$color-border: #e5e7eb;
+$color-bg: #f3f4f6;
+$color-danger: #dc2626;
+$color-success: #16a34a;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+  background: $color-bg;
+  color: $color-text;
+  display: flex;
+  justify-content: center;
+  padding: 24px 12px;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+}
+
+.phone-card {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 24px 20px;
+}
+
+/* フォーム部品 */
+.field {
+  margin-bottom: 12px;
+}
+
+.field input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid $color-border;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: $color-primary;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.link-secondary {
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.alert {
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  font-size: 13px;
+
+  p {
+    margin: 4px 0;
+  }
+}
+
+.alert-error {
+  background: #fef2f2;
+  color: $color-danger;
+}
+
+.alert-success {
+  background: #f0fdf4;
+  color: $color-success;
+}
+
+/* ブランドヘッダー(ログイン画面) */
+.brand-header {
+  text-align: center;
+  margin-bottom: 20px;
+
+  .brand-logo {
+    width: 56px;
+    height: 56px;
+  }
+
+  h1 {
+    margin-top: 8px;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+  }
+}
+
+/* 新規登録: 質問ウィザード */
+.quiz {
+  margin-top: 16px;
+}
+
+.quiz-progress-label {
+  font-weight: bold;
+  margin: 0 0 6px;
+}
+
+.progress-bar {
+  height: 6px;
+  background: $color-border;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: $color-primary;
+  transition: width 0.2s ease;
+}
+
+.quiz-step {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.quiz-question {
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.scale-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.scale-button {
+  input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid $color-border;
+    color: $color-muted;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  input:checked + span {
+    border-color: $color-primary;
+    background: $color-primary;
+    color: #fff;
+  }
+}
+
+.scale-caption {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: $color-muted;
+  margin-bottom: 20px;
+}
+
+/* ホーム画面 */
+.home-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.team-switcher {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0;
+  cursor: pointer;
+  color: $color-text;
+}
+
+.home-header-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+}
+
+.search-box {
+  margin-bottom: 20px;
+
+  input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid $color-border;
+    border-radius: 10px;
+    background: $color-bg;
+  }
+}
+
+.radar-section {
+  margin-bottom: 24px;
+}
+
+.radar-title {
+  font-size: 13px;
+  color: $color-muted;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.members-title, .answers-title {
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  color: $color-text;
+}
+
+.member-name {
+  font-size: 12px;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: $color-primary-light;
+  color: $color-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.avatar-add {
+  background: $color-border;
+  color: $color-muted;
+  font-size: 20px;
+}
+
+.avatar-large {
+  width: 64px;
+  height: 64px;
+  font-size: 24px;
+}
+
+.empty-state {
+  color: $color-muted;
+  font-size: 14px;
+  text-align: center;
+  padding: 24px 0;
+}
+
+/* チーム切り替えモーダル */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  &.active {
+    display: flex;
+  }
+}
+
+.modal-box {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.team-list {
+  list-style: none;
+  margin: 16px 0;
+  padding: 0;
+
+  li {
+    border-bottom: 1px solid $color-border;
+  }
+
+  a {
+    display: block;
+    padding: 10px 0;
+    color: $color-text;
+  }
+}
+
+.create-team-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+
+  input {
+    padding: 10px 12px;
+    border: 1px solid $color-border;
+    border-radius: 8px;
+  }
+}
+
+/* ユーザー詳細画面 */
+.back-link {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: $color-muted;
+}
+
+.member-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.member-profile-name {
+  font-weight: bold;
+  margin: 0;
+}
+
+.member-profile-email {
+  font-size: 12px;
+  color: $color-muted;
+  margin: 4px 0 0;
+}
+
+.badge-online {
+  font-size: 10px;
+  color: $color-success;
+  border: 1px solid $color-success;
+  border-radius: 8px;
+  padding: 1px 6px;
+  margin-left: 6px;
+}
+
+.answer-category {
+  margin-bottom: 16px;
+}
+
+.answer-category-title {
+  font-size: 13px;
+  font-weight: bold;
+  color: $color-primary;
+  margin-bottom: 8px;
+}
+
+.answer-item {
+  padding: 8px 0;
+  border-bottom: 1px solid $color-border;
+
+  .answer-question {
+    font-size: 13px;
+    margin: 0 0 4px;
+  }
+
+  .answer-value {
+    font-size: 12px;
+    color: $color-muted;
+    margin: 0;
+  }
+}
